@@ -1,0 +1,29 @@
+{
+  "name": "fitkit-health",
+  "version": "1.0.0",
+  "description": "A digital nutrition concierge at your service!",
+  "main": "queries.js",
+  "scripts": {
+    "start:server": "nodemon server.js",
+    "start": "cd frontend && npm start",
+    "build": "cd frontend && npm run build && cd ..",
+    "install-all": "npm install && cd frontend && npm install && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgraas09/fitkit-health/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "git+https://github.com/kgraas09/fitkit-health/"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.11"
+  },
+  "devDependencies": {}
+}
