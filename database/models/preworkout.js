@@ -3,16 +3,14 @@ const Schema = mongoose.Schema;
 
 const preworkoutSchema = new Schema({
   _id: Number,
-  results: [{
-    name: String,
-    description: String,
-    flavor: String,
-    servingSize: Number,
-    primaryStimulant: String,
-    otherIngredients: [],
-  }]
+  name: String,
+  description: String,
+  flavor: String,
+  servingSize: Number,
+  primaryStimulant: String,
+  otherIngredients: [],
 });
 
-const Preworkout = mongoose.model("Preworkout", preworkoutSchema);
+const Preworkout = mongoose.model("Preworkout", preworkoutSchema, 'preworkouts');
 
 export default Preworkout; 

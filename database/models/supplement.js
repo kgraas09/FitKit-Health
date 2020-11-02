@@ -3,16 +3,17 @@ const Schema = mongoose.Schema;
 
 const supplementalSchema = new Schema({
   _id: Number,
-  results: [{
-    name: String,
-    description: String,
-    flavor: String,
-    servingSize: Number,
-    proteinBase: String,
-    otherIngredients: [],
-  }]
+  name: String,
+  description: String,
+  flavor: String,
+  servingSize: Number,
+  other : String, 
+  otherIngredients: [],
 });
 
-const Supplemental = mongoose.model("Supplemental", supplementalSchema);
+// Good opportunity to use REFS - could put an object inside of other ingrededients that references and "other ingredients" collection
 
-export default Supplemental; 
+
+const Supplemental = mongoose.model("Supplemental", supplementalSchema, 'supplementals');
+
+export default Supplemental;  
