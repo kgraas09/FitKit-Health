@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/node_modulesw
 /.pnp
 .pnp.js
 
@@ -19,3 +19,4 @@
 .env.production.local
 
 npm-debug.log*
+node_modules
