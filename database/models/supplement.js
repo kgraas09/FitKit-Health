@@ -14,4 +14,4 @@ const supplementalSchema = new Schema({
 
 const Supplemental = mongoose.model("Supplemental", supplementalSchema, 'supplementals');
 
-export default Supplemental;  
+module.exports = { Supplemental };

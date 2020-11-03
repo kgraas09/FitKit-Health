@@ -8,9 +8,10 @@ const preworkoutSchema = new Schema({
   flavor: String,
   servingSize: Number,
   primaryStimulant: String,
+  other: [],
   otherIngredients: [],
 });
 
 const Preworkout = mongoose.model("Preworkout", preworkoutSchema, 'preworkouts');
 
-export default Preworkout; 
+module.exports = { Preworkout };

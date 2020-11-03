@@ -1,48 +1,47 @@
 const mongoose = require('mongoose');
 const mongoDB = 'mongodb://127.0.0.1/fitkithealth';
-const supplements = require('../models/Supplemental');
-const preworkouts = require('../models/Preworkout');
-const postworkouts = require('../models/Postworkout');
-const { default: Supplemental } = require('../models/supplement');
+const { Supplemental } = require('../models/supplement.js');
+const { Preworkout } = require('../models/preworkout.js');
+const { Postworkout } = require('../models/postworkout.js');
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-const getSupplementals = {
-  getAllSupplements: (callback) => {
-    supplementals.find((err, data) => {
-      if (err) {
-        callback(err, null);
-      } else {
-        callback(null, data);
-      }
-    });
-  }
+const getSupplementals = (callback) => {
+  return Supplemental.find((err, results) => {
+    if (err) {
+      console.log('Could not retrieve supplements from database.')
+      callback(err, null);
+    } else {
+      console.log('Supplement list retrieval successful.')
+      callback(null, results);
+    }
+  });
 };
 
-const getPreworkouts = {
-  getAllPreworkouts: (callback) => {
-    preworkouts.find((err, data) => {
-      if (err) {
-        callback(err, null);
-      } else {
-        callback(null, data);
-      }
-    });
-  }
+const getPreworkouts = (callback) => {
+  return Preworkout.find((err, results) => {
+    if (err) {
+      console.log('Could not retrieve preworkout list from database.')
+      callback(err, null);
+    } else {
+      console.log('Preworkout list retrieval successful.')
+      callback(null, results);
+    }
+  });
 };
 
-const getPostworkouts = {
-  getAllPostworkouts: (callback) => {
-    postworkouts.find((err, data) => {
-      if (err) {
-        callback(err, null);
-      } else {
-        callback(null, data);
-      }
-    });
-  }
+const getPostworkouts = (callback) => {
+  return Postworkout.find((err, results) => {
+    if (err) {
+      console.log('Could not retrieve postworkout list from database.')
+      callback(err, null);
+    } else {
+      console.log('Postworkout list retrieval successful.')
+      callback(null, results);
+    }
+  });
 };
 
 module.exports = {

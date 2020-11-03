@@ -8,9 +8,10 @@ const postworkoutSchema = new Schema({
   flavor: String,
   servingSize: Number,
   proteinBase: String,
+  other: [],
   otherIngredients: [],
 });
 
 const Postworkout = mongoose.model("Postworkout", postworkoutSchema, 'postworkouts');
 
-export default Postworkout; 
+module.exports = { Postworkout };
