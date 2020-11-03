@@ -5,6 +5,7 @@ import getPostworkouts from './API/getPostworkouts.js';
 import Header from './components/header.jsx';
 import MasterForm from './components/masterForm.jsx';
 import Results from './components/results.jsx';
+import './app.css';
 
 const App = () => {
   const [supplements, setSupplements] = useState([]);
@@ -32,7 +33,7 @@ const App = () => {
 
   return (
     <>
-      <div className='app-main'>
+      <div id="body-kg">
         <Header />
         <MasterForm currentStep={step} changeStep={setStep}/>
         <Results supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>

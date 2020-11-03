@@ -47,7 +47,6 @@ const MasterForm = ({step, changeStep}) => {
 
   return (
     <>
-      <div>Master Form</div>
       <Step1 formData={form} updateForm={setForm} questions={questionsList}/>
       <Step2 formData={form} updateForm={setForm} questions={questionsList}/>
       <Step3 formData={form} updateForm={setForm} questions={questionsList}/>

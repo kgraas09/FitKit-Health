@@ -20,13 +20,13 @@ const Step1 = ({formData, updateForm, questions}) => {
     <div>
       <h3>{currentQuestion}</h3>
         <div className={classes.root}>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="1">
             Male
           </Button>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="2">
             Female
           </Button>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="3">
             Non-binary
           </Button>
       </div>

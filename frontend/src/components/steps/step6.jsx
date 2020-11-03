@@ -42,6 +42,7 @@ const Step6 = ({formData, updateForm, questions}) => {
   return (
     <div>
       <h3>{currentQuestion}</h3>
+        <div className={classes.root}>
         <FormControl component="fieldset" className={classes.formControl}>
           <FormLabel component="legend">Select Your Method!</FormLabel>
           <FormGroup>
@@ -88,6 +89,7 @@ const Step6 = ({formData, updateForm, questions}) => {
           </FormGroup>
           <FormHelperText>Please select at least one option.</FormHelperText>
         </FormControl>
+      </div>
     </div>
   )
 };

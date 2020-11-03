@@ -1,0 +1,23 @@
+#body {
+  justify-content: center;
+}
+
+.header-logo {
+  background-image: url("https://i.ibb.co/V3PqPJM/Fit-Kit-Logo-Renders-Cropped.png");
+  display: flex;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 120px;
+  margin: -10px 0px 0px 0px;
+  padding-left: 20px;
+}
+
+#body-kg {
+  width: 800px;
+  margin-left: 30 auto;
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #056676;
+}
