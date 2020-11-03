@@ -1,5 +1,4 @@
 ![FitKit Logo](https://i.ibb.co/MZzwKr5/Fit-Kit-Logo-Renders-10.png)
-Format: ![Alt Text](url)
 
 # FitKit Health
 
