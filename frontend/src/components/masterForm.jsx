@@ -29,10 +29,6 @@ const MasterForm = ({step, changeStep}) => {
 
   const [form, setForm] = useState(initialFormValues);
 
-  const handleChange = (event) => {
-    setForm()
-  }
-
   const NextButton = () => {
     return (
       <button id="next-button" type="submit">Next</button>

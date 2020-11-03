@@ -21,16 +21,16 @@ const Step6 = ({formData, updateForm, questions}) => {
   // What type of exercises?
   const classes = useStyles();
   const [state, setState] = React.useState({
-    Running: true,
-    Swimming: false,
-    Weightlifting: false,
-    Hiking: false,
-    Yoga: false,
-    Pilates: false,
-    Sports: false,
-    Dancing: false,
-    Climbing: false,
-    Other: false,
+    running: true,
+    swimming: false,
+    weightlifting: false,
+    hiking: false,
+    yoga: false,
+    pilates: false,
+    sports: false,
+    dancing: false,
+    climbing: false,
+    other: false,
   });
 
   const handleChange = (event) => {

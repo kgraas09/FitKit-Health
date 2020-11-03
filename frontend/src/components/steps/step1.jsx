@@ -12,21 +12,23 @@ const useStyles = makeStyles((theme) => ({
 
 const Step1 = ({formData, updateForm, questions}) => {
   const currentQuestion = questions[0];
-  // "I identify most as" 
-  const formToUpdate = formData.step1;
   const classes = useStyles();
+
+  const buttonHandler = (e) => {
+    console.log(formData);
+  }
 
   return (
     <div>
       <h3>{currentQuestion}</h3>
         <div className={classes.root}>
-          <Button variant="contained" color="primary" value="1">
+          <Button variant="contained" color="primary" value="1" key="1" onClick={buttonHandler}>
             Male
           </Button>
-          <Button variant="contained" color="primary" value="2">
+          <Button variant="contained" color="primary" value="2" key="2" onClick={buttonHandler}>
             Female
           </Button>
-          <Button variant="contained" color="primary" value="3">
+          <Button variant="contained" color="primary" value="3" key="3" onClick={buttonHandler}>
             Non-binary
           </Button>
       </div>
