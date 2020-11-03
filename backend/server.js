@@ -1,3 +1,4 @@
+const cors = require('cors')
 const mongoose = require('mongoose');
 const mongoDB = 'mongodb://127.0.0.1/fitkithealth';
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -10,6 +11,7 @@ const path = require("path");
 const PORT = 9000;
 const { getSupplementals, getPreworkouts, getPostworkouts } = require('../database/controllers/connect.js');
 
+app.use(cors())
 app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 app.get("/supplementals", (req, res) => {
