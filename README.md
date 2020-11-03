@@ -1,7 +1,7 @@
-![FitKit Logo](https://ibb.co/GnZYGy3)
+![FitKit Logo](https://i.ibb.co/MZzwKr5/Fit-Kit-Logo-Renders-10.png)
 Format: ![Alt Text](url)
 
-# fitkit-health
+# FitKit Health
 
 ## Welcome to the nutrition concierge! 
 
