@@ -20,6 +20,7 @@
     "url": "git+https://github.com/kgraas09/fitkit-health/"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",

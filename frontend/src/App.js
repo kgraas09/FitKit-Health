@@ -32,9 +32,11 @@ const App = () => {
 
   return (
     <>
-      <Header />
-      <MasterForm currentStep={step} changeStep={setStep}/>
-      <Results supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+      <div className='app-main'>
+        <Header />
+        <MasterForm currentStep={step} changeStep={setStep}/>
+        <Results supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+      </div>
     </>
   )
 }
