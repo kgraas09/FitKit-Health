@@ -1,12 +1,13 @@
-.header-logo {
-  background-image: url("https://i.ibb.co/V3PqPJM/Fit-Kit-Logo-Renders-Cropped.png");
+#header-logo {
+  justify-content: center;
+  text-align: center;
   display: flex;
   object-fit: cover;
   background-repeat: no-repeat;
   width: auto;
   height: 120px;
-  margin: -10px 0px 0px 0px;
-  padding-left: 20px;
+  margin: 10px 10px 10px 0px;
+  padding-left: 40px;
 }
 
 #app-main {
@@ -16,4 +17,40 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   color: #056676;
+}
+
+#button-submit {
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  border-color: #056676;
+  color: #056676;
+  border: 1px solid-#e8ded2;
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+}
+
+#button-submit:hover {
+  color: #e8ded2;
+  border: 2px solid #056676;
+  background: #056676;
+  box-shadow: 0 1px 0 #5eaaa8;
+  transition-timing-function: ease-in;
+  transition: .3s;
+}
+
+.master-form {
+  padding-top: 15px;
+  margin: auto;
+  width: 100%;
+  border: 3px solid rgba(255, 124, 2, 0.205);
+  padding: 10px;
+}
+
+.question {
+  padding-bottom: 20px;
+  text-align: center;
+  justify-content: center;
 }

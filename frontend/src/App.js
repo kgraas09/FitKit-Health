@@ -15,24 +15,6 @@ const App = () => {
   const [form, setForm] = useState({});
   const [shown, setShown] = useState(false);
 
-  // useEffect(() => {
-  //   getSupplements()
-  //     .then((data) => setSupplements(data))
-  //     .catch((err) => console.log('Well... there was a problem with the supplements request: ', err));
-  // }, []);
- 
-  // useEffect(() => {
-  //   getPreworkouts()
-  //     .then((data) => setPreworkouts(data))
-  //     .catch((err) => console.log('Well... there was a problem with the preworkout request: ', err));
-  // }, []);
-
-  // useEffect(() => {
-  //   getPostworkouts()
-  //     .then((data) => setPostworkouts(data))
-  //     .catch((err) => console.log('Well... there was a problem with the postworkout request: ', err));
-  // }, []);
-
   useEffect(() => {
     getSupplements()
       .then((data) => { setSupplements(data) 
@@ -43,19 +25,25 @@ const App = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  
-  let completedForm = Object.keys(form).length > 7;
-  if (completedForm) {
-    setShown(true);
-  }
-
   return (
     <>
-      <div id='app-main'>
+      <div>
         <Header />
-        <MasterForm currentStep={step} changeStep={setStep} form={form} setForm={setForm}/>
-        <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8"> 
+              <div className="master-form">
+                <MasterForm currentStep={step} changeStep={setStep} form={form} setForm={setForm}/>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div>
+                <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </>
   )
 }

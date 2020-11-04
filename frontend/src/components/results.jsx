@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
+import _ from 'lodash';
 
 const Results = ({supplements, preworkouts, postworkouts, form}) => {
 
-  const randomNumber = Math.floor(Math.random() * 4) + 1;
-  const randomNumber2 = Math.floor(Math.random() * 2) + 1;
-  // useEffect(() => {
-  // }, []);
-  var supplementResult = supplements[0];
-  var preworkoutResult = preworkouts[0];
-  var postworkoutResult = postworkouts[0];
+  var supplementResult = _.sample(supplements);
+  var preworkoutResult = _.sample(preworkouts);
+  var postworkoutResult = _.sample(postworkouts);
 
   if (supplements.length > 0 && preworkouts.length > 0 && postworkouts.length > 0) {
     return (

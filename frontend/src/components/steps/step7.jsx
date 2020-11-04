@@ -16,6 +16,7 @@ const Step7 = ({clickHandler, questions}) => {
   const classes = useStyles();
 
   const buttonHandler = (e) => {
+    e.preventDefault();
     clickHandler(e.target.value, "step7");
   };
 

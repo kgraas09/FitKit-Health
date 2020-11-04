@@ -45,9 +45,6 @@ const Step2 = ({formData, updateForm, questions}) => {
     <div>
       <h3>{currentQuestion}</h3>
         <div>
-        <Button className={classes.button} onClick={handleOpen}>
-          Select Your Age
-        </Button>
         <FormControl className={classes.formControl}>
           <InputLabel id="demo-controlled-open-select-label">Age</InputLabel>
           <Select

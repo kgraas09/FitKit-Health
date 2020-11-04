@@ -11,17 +11,14 @@ import Step8 from './steps/step8.jsx';
 import Step9 from './steps/step9.jsx';
 import Step10 from './steps/step10.jsx';
 import Step11 from './steps/step11.jsx';
+import { Container } from '@material-ui/core';
 
 const MasterForm = ({step, changeStep, form, setForm}) => {
 
   const handleButtonClick = (value, step) => {
-    // const newObj = {...form};
-    // newObj[step] = value;
-    // setForm(newObj);
-    setForm((form) => (
-      {...form, [step]: value}
-    ));
-    console.log('Form: ', form);
+    let newObj = {...form};
+    newObj[step] = value;
+    setForm(newObj);
   };
 
 
@@ -31,18 +28,44 @@ const MasterForm = ({step, changeStep, form, setForm}) => {
 
   return (
     <>
-      <Step1 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step2 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step3 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step4 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step5 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step6 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step7 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step8 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step9 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step10 questions={questionsList} clickHandler={handleButtonClick}/>
-      <Step11 questions={questionsList} clickHandler={handleButtonClick}/>
-      <button type="submit" onClick={handleFormSubmit}>View Your Results!</button>
+    <Container maxWidth="md">
+      <div className="question">
+        <Step1 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step2 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step3 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step4 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step5 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step6 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step7 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step8 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step9 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step10 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+      <div className="question">
+        <Step11 questions={questionsList} clickHandler={handleButtonClick}/>
+      </div>
+
+      <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
+
+      </Container>
     </>
   );
 }

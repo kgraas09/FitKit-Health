@@ -16,6 +16,7 @@ const Step8 = ({clickHandler, questions}) => {
   const classes = useStyles();
 
   const buttonHandler = (e) => {
+    e.preventDefault();
     clickHandler(e.target.value, "step8");
   };
 
@@ -29,7 +30,7 @@ const Step8 = ({clickHandler, questions}) => {
           <Button variant="contained" color="primary" value="1" onClick={buttonHandler}>
             No
           </Button>
-          <Button variant="contained" color="primary" value="0" onClick={buttonHandler}>
+          <Button variant="contained" color="primary" value="1" onClick={buttonHandler}>
             No Preference
           </Button>
         </div>
