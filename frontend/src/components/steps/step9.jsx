@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Step9 = ({clickHandler, questions}) => {
   const currentQuestion = questions[8];
-  // How many times per week do you exercise?
+  // Meals per day?
   const classes = useStyles();
   
   const buttonHandler = (e) => {

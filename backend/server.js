@@ -17,10 +17,8 @@ app.use(express.static(path.join(__dirname, "./frontend/build")));
 app.get("/supplementals", (req, res) => {
   getSupplementals((err, data) => {
     if (err) {
-      console.log('Could not fetch supplementals from server.')
       res.status(404);
     } else {
-      console.log('Supplementals fetched from server.');
       res.status(200).send(data);
     };
   });
@@ -29,10 +27,8 @@ app.get("/supplementals", (req, res) => {
 app.get("/preworkouts", (req, res) => {
   getPreworkouts((err, data) => {
     if (err) {
-      console.log('Could not fetch preworkouts from server.')
       res.status(404);
     } else {
-      console.log('Preworkouts fetched from server.');
       res.status(200).send(data);
     };
   });
@@ -41,10 +37,8 @@ app.get("/preworkouts", (req, res) => {
 app.get("/postworkouts", (req, res) => {
   getPostworkouts((err, data) => {
     if (err) {
-      console.log('Could not fetch postworkouts from server.')
       res.status(404);
     } else {
-      console.log('Postworkouts fetched from server.');
       res.status(200).send(data);
     };
   });

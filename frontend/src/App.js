@@ -13,24 +13,41 @@ const App = () => {
   const [postworkouts, setPostworkouts] = useState([]);
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({});
+  const [shown, setShown] = useState(false);
+
+  // useEffect(() => {
+  //   getSupplements()
+  //     .then((data) => setSupplements(data))
+  //     .catch((err) => console.log('Well... there was a problem with the supplements request: ', err));
+  // }, []);
+ 
+  // useEffect(() => {
+  //   getPreworkouts()
+  //     .then((data) => setPreworkouts(data))
+  //     .catch((err) => console.log('Well... there was a problem with the preworkout request: ', err));
+  // }, []);
+
+  // useEffect(() => {
+  //   getPostworkouts()
+  //     .then((data) => setPostworkouts(data))
+  //     .catch((err) => console.log('Well... there was a problem with the postworkout request: ', err));
+  // }, []);
 
   useEffect(() => {
     getSupplements()
-      .then((data) => setSupplements(data))
-      .catch((err) => console.log('Well... there was a problem with the API request: ', err));
+      .then((data) => { setSupplements(data) 
+      return getPreworkouts() })
+      .then((data) => { setPreworkouts(data)
+      return getPostworkouts() })
+      .then((data) => { setPostworkouts(data) })
+      .catch((err) => console.log(err));
   }, []);
 
-  useEffect(() => {
-    getPreworkouts()
-      .then((data) => setPreworkouts(data))
-      .catch((err) => console.log('Well... there was a problem with the API request: ', err));
-  }, []);
-
-  useEffect(() => {
-    getPostworkouts()
-      .then((data) => setPostworkouts(data))
-      .catch((err) => console.log('Well... there was a problem with the API request: ', err));
-  }, []);
+  
+  let completedForm = Object.keys(form).length > 7;
+  if (completedForm) {
+    setShown(true);
+  }
 
   return (
     <>
@@ -38,7 +55,7 @@ const App = () => {
         <Header />
         <MasterForm currentStep={step} changeStep={setStep} form={form} setForm={setForm}/>
         <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
-      </div>
+        </div>
     </>
   )
 }

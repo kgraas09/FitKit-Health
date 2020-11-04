@@ -1,7 +1,7 @@
 import React from 'react';
 
 const questionsList = [
-  "You identify most as:", 
+  "You identify as:", 
   "What is your age?",
   "What is your current height and weight?",
   "What time of day do you usually exercise?", 
