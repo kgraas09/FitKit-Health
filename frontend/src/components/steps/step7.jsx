@@ -10,25 +10,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Step7 = ({formData, updateForm, questions}) => {
+const Step7 = ({clickHandler, questions}) => {
   const currentQuestion = questions[6];
-  // What Why do you exercise? 
+  // Why do you exercise? 
   const classes = useStyles();
+
+  const buttonHandler = (e) => {
+    clickHandler(e.target.value, "step7");
+  };
 
   return (
     <div>
       <h3>{currentQuestion}</h3>
         <div className={classes.root}>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="0" onClick={buttonHandler}>
             Build Mass
           </Button>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="3" onClick={buttonHandler}>
             Lose Weight
           </Button>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="1" onClick={buttonHandler}>
             Tone Up
           </Button>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" value="2" onClick={buttonHandler}>
             Increase Endurance
           </Button>
         </div>

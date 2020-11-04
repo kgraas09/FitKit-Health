@@ -37,7 +37,7 @@ const Step3 = ({formData, updateForm, questions}) => {
             <optgroup label="Height">
             {heightArray.map((height) => {
               return (
-                <option value={height}>{height}</option>
+                <option value={height}>{height} in</option>
               )
             })}
             </optgroup>
@@ -50,7 +50,7 @@ const Step3 = ({formData, updateForm, questions}) => {
             <optgroup label="Weight">
             {weightArray.map((weight) => {
               return (
-                <option value={weight}>{weight}</option>
+                <option value={weight}>{weight} lbs</option>
               )
             })}
             </optgroup>

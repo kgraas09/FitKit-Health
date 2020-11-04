@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
@@ -10,13 +10,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Step1 = ({formData, updateForm, questions}) => {
+const Step1 = ({questions, clickHandler}) => {
   const currentQuestion = questions[0];
   const classes = useStyles();
 
   const buttonHandler = (e) => {
-    console.log(formData);
-  }
+    clickHandler(e.target.value, "step1");
+  };
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Step1 = ({formData, updateForm, questions}) => {
           <Button variant="contained" color="primary" value="2" key="2" onClick={buttonHandler}>
             Female
           </Button>
-          <Button variant="contained" color="primary" value="3" key="3" onClick={buttonHandler}>
+          <Button variant="contained" color="primary" value="3" key="2" onClick={buttonHandler}>
             Non-binary
           </Button>
       </div>

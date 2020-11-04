@@ -12,6 +12,7 @@ const App = () => {
   const [preworkouts, setPreworkouts] = useState([]);
   const [postworkouts, setPostworkouts] = useState([]);
   const [step, setStep] = useState(1);
+  const [form, setForm] = useState({});
 
   useEffect(() => {
     getSupplements()
@@ -33,10 +34,10 @@ const App = () => {
 
   return (
     <>
-      <div id="body-kg">
+      <div id='app-main'>
         <Header />
-        <MasterForm currentStep={step} changeStep={setStep}/>
-        <Results supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+        <MasterForm currentStep={step} changeStep={setStep} form={form} setForm={setForm}/>
+        <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
       </div>
     </>
   )
