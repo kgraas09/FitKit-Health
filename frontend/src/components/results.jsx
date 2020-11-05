@@ -44,24 +44,24 @@ const Results = ({supplements, preworkouts, postworkouts}) => {
     const body = (
       <div style={modalStyle} className={classes.paper}>
         <div>
-          <h3>Your Supplement Blend</h3>
-          <p>Name: {supplementResult.Name}</p>
+          <h3><u>To Take Daily:</u></h3>
+          <p><b>{supplementResult.Name}</b></p>
           <p>Serving: {supplementResult.Flavor}</p>
-          <p>Description: {supplementResult.Description}</p>
+          <p>{supplementResult.Description}</p>
           <p>Ingredients: {supplementResult.Ingredients}</p>
         </div>
         <div>
-          <h3>Your Preworkout Blend</h3>
-          <p>Name: {preworkoutResult.Name}</p>
+          <h3><u>Before You Exercise:</u></h3>
+          <p><b>{preworkoutResult.Name} Preworkout</b></p>
           <p>Flavor: {preworkoutResult.Flavor}</p>
-          <p>Description: {preworkoutResult.Description}</p>
+          <p>{preworkoutResult.Description}</p>
           <p>Ingredients: {preworkoutResult.otherIngredients}</p>
         </div>
         <div>
-          <h3>Your Postworkout Blend</h3>
-          <p>Name: {postworkoutResult.Name}</p>
+          <h3><u>After You Exercise:</u></h3>
+          <p><b>{postworkoutResult.Name}</b></p>
           <p>Flavor: {postworkoutResult.Flavor}</p>
-          <p>Description: {postworkoutResult.Description}</p>
+          <p>{postworkoutResult.Description}</p>
           <p>Ingredients: {postworkoutResult.otherIngredients}</p>
         </div>
       </div>

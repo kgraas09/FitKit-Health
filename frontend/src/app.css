@@ -1,9 +1,8 @@
-html {
+body {
   background: url("https://static.wixstatic.com/media/2faf41_8346b7ad16414c23b12dfeba2a145f9a~mv2_d_6048_4032_s_4_2.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 18px;
 }
 
 #header-logo {
@@ -30,15 +29,18 @@ html {
   margin-left: 280px;
   padding-bottom: 30px;
   padding-left: 50px;
-  color: #056676;
+  color: #2f5a61b0;
 }
 
 #landing-page {
+  background: rgba(255, 255, 255, 0.39);
+  align-items: center;
+  color: #056676;
+  text-align: center;
   margin: auto;
+  margin-top: 30px;
   width: 100%;
-  padding-top: 40px;
   padding: 10px;
-  opacity: 70%;
 }
 
 #landing-button {
@@ -48,19 +50,20 @@ html {
   color: #056676;
   border: 1px solid-#e8ded2;
   text-align: left;
-  width: 20%;
+  width: 30%;
   padding: 10px;
   margin: 10px 200px;
   display: block;
   text-align: center;
   outline: none;
+  opacity: 75%;
 }
 
 #landing-button:hover {
   color: #ffffff;
-  width: 20%;
+  width: 30%;
   border: 2px solid  #056676;
-  background:  rgba(255, 124, 2, 0.747);
+  background:    #056776bd;
   box-shadow: 0 1px 0rgba(255, 124, 2, 0.205);
   transition-timing-function: ease-in;
   transition: .3s;
@@ -75,6 +78,7 @@ html {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   color: #056676;
+  opacity: 86%;
 }
 
 #button-submit {
@@ -90,12 +94,13 @@ html {
   display: block;
   text-align: center;
   outline: none;
+  opacity: 75%;
 }
 
 #button-submit:hover {
   color: #ffffff;
   border: 2px solid  #0682e7;
-  background:  rgb(255, 198, 145);
+  background:   #056776bd;
   box-shadow: 0 1px 0rgba(255, 124, 2, 0.205);
   transition-timing-function: ease-in;
   transition: .3s;
@@ -108,12 +113,13 @@ html {
   margin: auto;
   display: flex;
   width: 100%;
-  margin-top: 140px;
+  margin-top: 10px;
   font-weight: 600;
   font-size: 36px;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  opacity: 100%
 };
 
 .landing-sec-description {
@@ -121,20 +127,19 @@ html {
   display: flex;
   width: 100%;
   padding-top: 400px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .master-form {
   padding-top: 15px;
   margin: auto;
   width: 100%;
-  border: 3px solid rgba(255, 124, 2, 0.205);
-  padding: 10px;
+  margin: -3px;
 }
 
 .question {
@@ -145,7 +150,7 @@ html {
 
 .question-formatter {
   font-size: 22px;
-  font-weight: 440;
+  font-weight: 540;
   padding-bottom: 15px;
 }
 

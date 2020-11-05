@@ -8,12 +8,6 @@ const dataManipulator = (formData) => {
     return reducer;
   };
 
-  const resultsObject = {
-    supplement: {},
-    preworkout: {},
-    postworkout: {},
-  };
-  
   const numericalValue = valueAssessment(formData);
   
   if (formData.step8 === "0") {

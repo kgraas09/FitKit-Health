@@ -41,24 +41,25 @@ const App = () => {
   return (
     <>
       <div>
-        <div className="background-image"></div>
-        <Header />
+      <Header />
+      <div class="background"></div>
         <LandingPage loadSite={handleFormViewer} buttonAvailable={buttonView}/>
-        { siteShown ? <div class="container">
-          <div class="row">
-            <div class="col-sm-12" id="app-main">
-              <div className="master-form">
-                <MasterForm form={form} setForm={setForm}/>
+        { siteShown ? 
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12" id="app-main">
+                <div className="master-form">
+                  <MasterForm form={form} setForm={setForm}/>
+                </div>
               </div>
-            </div>
-            <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
-            <div>
+              <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
               <div>
-                { shown ? <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/> : <div></div> }
+                <div>
+                  { shown ? <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/> : <div></div> }
+                </div>
               </div>
             </div>
-          </div>
-        </div> : <div></div> }
+          </div> : <div></div> }
       </div>
     </>
   )

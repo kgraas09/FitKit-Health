@@ -4,10 +4,6 @@ const { Supplemental } = require('../models/supplement.js');
 const { Preworkout } = require('../models/preworkout.js');
 const { Postworkout } = require('../models/postworkout.js');
 
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
 const getSupplementals = (callback) => {
   return Supplemental.find((err, results) => {
     if (err) {
