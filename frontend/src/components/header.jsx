@@ -11,7 +11,7 @@ const Header = () => {
       </div>
       <div id="header-slogan">
         <div class="row-sm-4">
-          Nutrition That Fits
+          – Nutrition That Fits –
         </div>
       </div>
     </div>

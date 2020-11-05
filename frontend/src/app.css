@@ -1,3 +1,11 @@
+html {
+  background: url("https://static.wixstatic.com/media/2faf41_8346b7ad16414c23b12dfeba2a145f9a~mv2_d_6048_4032_s_4_2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #header-logo {
   justify-content: center;
   text-align: center;
@@ -8,20 +16,56 @@
   height: 120px;
   margin: 10px 10px 10px 0px;
   padding-left: 40px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Bebas Neue', cursive;
 }
 
-
 #header-slogan {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   text-align: center;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 400;
   justify-content: center;
   display: flex;
+  margin-top: -20px;
+  margin-left: 280px;
   padding-bottom: 30px;
   padding-left: 50px;
   color: #056676;
+}
+
+#landing-page {
+  margin: auto;
+  width: 100%;
+  padding-top: 40px;
+  padding: 10px;
+  opacity: 70%;
+}
+
+#landing-button {
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  border-color: #056676;
+  color: #056676;
+  border: 1px solid-#e8ded2;
+  text-align: left;
+  width: 20%;
+  padding: 10px;
+  margin: 10px 200px;
+  display: block;
+  text-align: center;
+  outline: none;
+}
+
+#landing-button:hover {
+  color: #ffffff;
+  width: 20%;
+  border: 2px solid  #056676;
+  background:  rgba(255, 124, 2, 0.747);
+  box-shadow: 0 1px 0rgba(255, 124, 2, 0.205);
+  transition-timing-function: ease-in;
+  transition: .3s;
+  text-align: center;
+  outline: none;
 }
 
 #app-main {
@@ -40,9 +84,9 @@
   color: #056676;
   border: 1px solid-#e8ded2;
   text-align: left;
-  width: 100%;
+  width: 50%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 30px 300px;
   display: block;
   text-align: center;
   outline: none;
@@ -50,14 +94,39 @@
 
 #button-submit:hover {
   color: #ffffff;
-  border: 2px solid  #056676;
-  background:  rgba(255, 124, 2, 0.747);
+  border: 2px solid  #0682e7;
+  background:  rgb(255, 198, 145);
   box-shadow: 0 1px 0rgba(255, 124, 2, 0.205);
   transition-timing-function: ease-in;
   transition: .3s;
   text-align: center;
   font-size: 18px;
   outline: none;
+}
+
+.landing-description {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  margin-top: 140px;
+  font-weight: 600;
+  font-size: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+};
+
+.landing-sec-description {
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+  padding-top: 400px;
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .master-form {

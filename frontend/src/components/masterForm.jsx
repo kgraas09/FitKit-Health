@@ -21,12 +21,6 @@ const MasterForm = ({form, setForm, showResults}) => {
     setForm(newObj);
   };
 
-
-  const handleFormSubmit = () => {
-    console.log("form: ", form);
-    showResults(true);
-  };
-
   return (
     <>
     <Container maxWidth="md">
@@ -63,9 +57,6 @@ const MasterForm = ({form, setForm, showResults}) => {
       <div className="question">
         <Step11 questions={questionsList} clickHandler={handleButtonClick}/>
       </div>
-
-      <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
-
       </Container>
     </>
   );
