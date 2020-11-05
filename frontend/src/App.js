@@ -33,12 +33,12 @@ const App = () => {
           <div class="row">
             <div class="col-sm-12" id="app-main">
               <div className="master-form">
-                <MasterForm currentStep={step} changeStep={setStep} form={form} setForm={setForm}/>
+                <MasterForm form={form} setForm={setForm} showResults={setShown}/>
               </div>
             </div>
             <div>
               <div>
-                <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+                { shown ? <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/> : <div></div> }
               </div>
             </div>
           </div>
@@ -46,6 +46,6 @@ const App = () => {
       </div>
     </>
   )
-}
+};
 
 export default App;

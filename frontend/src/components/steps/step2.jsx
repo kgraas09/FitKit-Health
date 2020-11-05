@@ -43,7 +43,7 @@ const Step2 = ({formData, updateForm, questions}) => {
   
   return (
     <div>
-      <h3>{currentQuestion}</h3>
+      <div className="question-formatter">{currentQuestion}</div>
         <div>
         <FormControl className={classes.formControl}>
           <InputLabel id="demo-controlled-open-select-label">Age</InputLabel>

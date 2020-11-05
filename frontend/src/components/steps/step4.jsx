@@ -22,7 +22,7 @@ const Step4 = ({questions, clickHandler}) => {
 
   return (
     <div>
-      <h3>{currentQuestion}</h3>
+      <div className="question-formatter">{currentQuestion}</div>
         <div className={classes.root}>
           <Button variant="outlined" color="primary" value="1" onClick={buttonHandler}>
             Morning

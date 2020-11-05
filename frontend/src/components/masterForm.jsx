@@ -13,7 +13,7 @@ import Step10 from './steps/step10.jsx';
 import Step11 from './steps/step11.jsx';
 import { Container } from '@material-ui/core';
 
-const MasterForm = ({step, changeStep, form, setForm}) => {
+const MasterForm = ({form, setForm, showResults}) => {
 
   const handleButtonClick = (value, step) => {
     let newObj = {...form};
@@ -24,6 +24,7 @@ const MasterForm = ({step, changeStep, form, setForm}) => {
 
   const handleFormSubmit = () => {
     console.log("form: ", form);
+    showResults(true);
   };
 
   return (

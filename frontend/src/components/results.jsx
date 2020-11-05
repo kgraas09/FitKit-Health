@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import _ from 'lodash';
 
 const Results = ({supplements, preworkouts, postworkouts, form}) => {

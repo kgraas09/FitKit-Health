@@ -21,7 +21,7 @@ const Step1 = ({questions, clickHandler}) => {
 
   return (
     <div className="question">
-      <h3>{currentQuestion}</h3>
+      <div className="question-formatter">{currentQuestion}</div>
         <div className={classes.root}>
           <Button variant="outlined" color="primary" value="1" key="1" onClick={buttonHandler}>
             Male

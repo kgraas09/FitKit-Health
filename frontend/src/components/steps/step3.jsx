@@ -28,7 +28,7 @@ const Step3 = ({formData, updateForm, questions}) => {
 
   return (
     <div>
-      <h3>{currentQuestion}</h3>
+      <div className="question-formatter">{currentQuestion}</div>
         <div>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="grouped-native-select">Height</InputLabel>

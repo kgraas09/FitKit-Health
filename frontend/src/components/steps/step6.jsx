@@ -42,7 +42,7 @@ const Step6 = ({formData, updateForm, questions}) => {
   
   return (
     <div>
-      <h3>{currentQuestion}</h3>
+      <div className="question-formatter">{currentQuestion}</div>
         <div className={classes.root}>
         <FormControl component="fieldset" className={classes.formControl}>
           <FormLabel component="legend">Select Your Method!</FormLabel>

@@ -11,6 +11,7 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+
 #header-slogan {
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -19,6 +20,8 @@
   justify-content: center;
   display: flex;
   padding-bottom: 30px;
+  padding-left: 50px;
+  color: #056676;
 }
 
 #app-main {
@@ -46,13 +49,14 @@
 }
 
 #button-submit:hover {
-  color: #056676;
-  border: 2px solid  rgba(255, 124, 2, 0.205);
-  background:  rgba(255, 124, 2, 0.205);
+  color: #ffffff;
+  border: 2px solid  #056676;
+  background:  rgba(255, 124, 2, 0.747);
   box-shadow: 0 1px 0rgba(255, 124, 2, 0.205);
   transition-timing-function: ease-in;
   transition: .3s;
   text-align: center;
+  font-size: 18px;
   outline: none;
 }
 
@@ -68,6 +72,12 @@
   margin: 20px;
   text-align: center;
   justify-content: center;
+}
+
+.question-formatter {
+  font-size: 22px;
+  font-weight: 440;
+  padding-bottom: 15px;
 }
 
 .checkboxes {
