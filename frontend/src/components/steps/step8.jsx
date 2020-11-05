@@ -24,13 +24,13 @@ const Step8 = ({clickHandler, questions}) => {
     <div>
       <h3>{currentQuestion}</h3>
         <div className={classes.root}>
-          <Button variant="contained" color="primary" value="0" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="0" onClick={buttonHandler}>
             Yes
           </Button>
-          <Button variant="contained" color="primary" value="1" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="1" onClick={buttonHandler}>
             No
           </Button>
-          <Button variant="contained" color="primary" value="1" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="1" onClick={buttonHandler}>
             No Preference
           </Button>
         </div>

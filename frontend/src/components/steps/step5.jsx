@@ -24,13 +24,13 @@ const Step5 = ({clickHandler, questions}) => {
     <div>
       <h3>{currentQuestion}</h3>
         <div className={classes.root}>
-          <Button variant="contained" color="primary" value="2" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="2" onClick={buttonHandler}>
             1 - 2
           </Button>
-          <Button variant="contained" color="primary" value="1" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="1" onClick={buttonHandler}>
             3 - 5
           </Button>
-          <Button variant="contained" color="primary" value="0" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="0" onClick={buttonHandler}>
             5 +
           </Button>
         </div>

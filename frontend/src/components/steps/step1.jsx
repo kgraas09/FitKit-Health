@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(2),
     },
   },
 }));
@@ -20,16 +20,16 @@ const Step1 = ({questions, clickHandler}) => {
   };
 
   return (
-    <div>
+    <div className="question">
       <h3>{currentQuestion}</h3>
         <div className={classes.root}>
-          <Button variant="contained" color="primary" value="1" key="1" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="1" key="1" onClick={buttonHandler}>
             Male
           </Button>
-          <Button variant="contained" color="primary" value="2" key="2" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="2" key="2" onClick={buttonHandler}>
             Female
           </Button>
-          <Button variant="contained" color="primary" value="3" key="2" onClick={buttonHandler}>
+          <Button variant="outlined" color="primary" value="3" key="2" onClick={buttonHandler}>
             Non-binary
           </Button>
       </div>

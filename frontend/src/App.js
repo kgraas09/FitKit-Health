@@ -31,12 +31,12 @@ const App = () => {
         <Header />
         <div class="container">
           <div class="row">
-            <div class="col-sm-8"> 
+            <div class="col-sm-12" id="app-main">
               <div className="master-form">
                 <MasterForm currentStep={step} changeStep={setStep} form={form} setForm={setForm}/>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div>
               <div>
                 <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
               </div>
