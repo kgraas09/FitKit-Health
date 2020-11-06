@@ -8,6 +8,5 @@ FitKit Health assess your fitness goals and daily routines, and calculates your 
 
 ## Getting Started
 
-<addr>
-* "npm run server" will start your Node.js server
-* "npm start" will launch the app in the browser
+- "npm run server" will start your Node.js server
+- "npm start" will launch the app in the browser
