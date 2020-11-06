@@ -25,11 +25,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Results = ({supplements, preworkouts, postworkouts}) => {
+const Results = ({supplements, preworkouts, postworkouts, form}) => {
 
   var supplementResult = _.sample(supplements);
-  var preworkoutResult = _.sample(preworkouts);
-  var postworkoutResult = _.sample(postworkouts);
+  
+  var preworkoutResult;
+  
+  if (form.step10 === "3") {
+    preworkoutResult = preworkouts[1];
+  } else {
+    preworkoutResult = _.sample(preworkouts);
+  };
+  
+  var postworkoutResult;
+
+  if (form.step7 === "0") {
+    postworkoutResult = postworkouts[3];
+  } else if (form.step8 === "0") {
+    postworkoutResult = postworkouts[0];
+  } else {
+    postworkoutResult = _.sample(postworkouts);
+  };
 
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
@@ -59,7 +75,7 @@ const Results = ({supplements, preworkouts, postworkouts}) => {
         </div>
         <div>
           <h3><u>After You Exercise:</u></h3>
-          <p><b>{postworkoutResult.Name}</b></p>
+          <p><b>{postworkoutResult.Name} Protein Supplement</b></p>
           <p>Flavor: {postworkoutResult.Flavor}</p>
           <p>{postworkoutResult.Description}</p>
           <p>Ingredients: {postworkoutResult.otherIngredients}</p>

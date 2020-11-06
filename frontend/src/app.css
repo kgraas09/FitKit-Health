@@ -52,7 +52,7 @@ body {
   text-align: left;
   width: 30%;
   padding: 10px;
-  margin: 10px 200px;
+  margin: 10px 220px;
   display: block;
   text-align: center;
   outline: none;
@@ -107,6 +107,7 @@ body {
   text-align: center;
   font-size: 18px;
   outline: none;
+  opacity: 100%;
 }
 
 .landing-description {
