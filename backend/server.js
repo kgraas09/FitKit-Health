@@ -8,7 +8,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 const express = require("express");
 const app = express();
 const path = require("path");
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 const { getSupplementals, getPreworkouts, getPostworkouts } = require('../database/controllers/connect.js');
 
 app.use(cors())
