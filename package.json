@@ -6,7 +6,7 @@
   "scripts": {
     "server": "cd backend && nodemon server.js",
     "start": "cd frontend && npm start",
-    "build": "cd frontend && npm run build && cd ..",
+    "build": "cd frontend && npm run build",
     "install-all": "npm install && cd frontend && npm install && cd .."
   },
   "repository": {
