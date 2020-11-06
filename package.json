@@ -2,7 +2,10 @@
   "name": "fitkit-health",
   "version": "1.0.0",
   "description": "A digital nutrition concierge at your service!",
-  "main": "queries.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "server": "cd backend && nodemon server.js",
     "start": "cd frontend && npm start",
