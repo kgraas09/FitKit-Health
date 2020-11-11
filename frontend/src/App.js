@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import getSupplements from './API/getSupplementals.js';
 import getPreworkouts from './API/getPreworkouts.js';
 import getPostworkouts from './API/getPostworkouts.js';
@@ -40,7 +41,7 @@ const App = () => {
 
   return (
     <>
-      <div>
+      <Router>
       <Header />
       <div class="background"></div>
         <LandingPage loadSite={handleFormViewer} buttonAvailable={buttonView}/>
@@ -60,7 +61,7 @@ const App = () => {
               </div>
             </div>
           </div> : <div></div> }
-      </div>
+      </Router>
     </>
   )
 };
