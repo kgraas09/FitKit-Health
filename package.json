@@ -28,7 +28,9 @@
     "lodash": "^4.17.20",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.11",
-    "react-bootstrap": "^1.4.0"
+    "react-bootstrap": "^1.4.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {}
 }

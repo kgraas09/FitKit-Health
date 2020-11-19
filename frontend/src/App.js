@@ -6,6 +6,7 @@ import LandingPage from './components/Landing/landing.jsx';
 import Header from './components/Header/header.jsx';
 import MasterForm from './components/RecommendationForm/masterForm.jsx';
 import Results from './components/RecommendationForm/results.jsx';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './app.css';
 
 const App = () => {
@@ -41,25 +42,16 @@ const App = () => {
   return (
     <>
       <div>
-      <Header />
+      <Router>
+      <Header / >
       <div class="background"></div>
-        <LandingPage loadSite={handleFormViewer} buttonAvailable={buttonView}/>
-        { siteShown ? 
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12" id="app-main">
-                <div className="master-form">
-                  <MasterForm form={form} setForm={setForm}/>
-                </div>
-              </div>
-              <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
-              <div>
-                <div>
-                  { shown ? <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/> : <div></div> }
-                </div>
-              </div>
-            </div>
-          </div> : <div></div> }
+        <Switch>
+          <Route path="/" component={LandingPage} loadSite={handleFormViewer} buttonAvailable={buttonView}/>
+          <MasterForm form={form} setForm={setForm}/>
+          <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
+          <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+        </Switch>
+      </Router>
       </div>
     </>
   )

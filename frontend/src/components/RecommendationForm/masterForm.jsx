@@ -23,41 +23,49 @@ const MasterForm = ({form, setForm, showResults}) => {
 
   return (
     <>
-    <Container maxWidth="md">
-      <div className="question">
-        <Step1 questions={questionsList} clickHandler={handleButtonClick}/>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" id="app-main">
+          <div className="master-form">
+            <Container maxWidth="md">
+              <div className="question">
+                <Step1 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step2 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step3 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step4 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step5 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step6 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step7 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step8 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step9 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step10 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              <div className="question">
+                <Step11 questions={questionsList} clickHandler={handleButtonClick}/>
+              </div>
+              </Container>
+          </div>
+        </div>
       </div>
-      <div className="question">
-        <Step2 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step3 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step4 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step5 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step6 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step7 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step8 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step9 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step10 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      <div className="question">
-        <Step11 questions={questionsList} clickHandler={handleButtonClick}/>
-      </div>
-      </Container>
+    </div>
     </>
   );
 }
