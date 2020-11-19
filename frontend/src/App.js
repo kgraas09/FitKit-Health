@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import getSupplements from './API/getSupplementals.js';
 import getPreworkouts from './API/getPreworkouts.js';
 import getPostworkouts from './API/getPostworkouts.js';
-import LandingPage from './components/landing.jsx';
-import Header from './components/header.jsx';
-import MasterForm from './components/masterForm.jsx';
-import Results from './components/results.jsx';
+import LandingPage from './components/Landing/landing.jsx';
+import Header from './components/Header/header.jsx';
+import MasterForm from './components/RecommendationForm/masterForm.jsx';
+import Results from './components/RecommendationForm/results.jsx';
 import './app.css';
 
 const App = () => {
