@@ -34,11 +34,6 @@ const App = () => {
     setButtonView(false);
   }
 
-  const handleFormSubmit = () => {
-    console.log("form: ", form);
-    setShown(true);
-  };
-
   return (
     <>
       <div>
@@ -47,9 +42,8 @@ const App = () => {
       <div class="background"></div>
         <Switch>
           <Route path="/" component={LandingPage} loadSite={handleFormViewer} buttonAvailable={buttonView}/>
-          <MasterForm form={form} setForm={setForm}/>
-          <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
-          <Results form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
+          <MasterForm path="/formentry" form={form} setForm={setForm}/>
+          <Results path="/results" form={form} supplements={supplements} preworkouts={preworkouts} postworkouts={postworkouts}/>
         </Switch>
       </Router>
       </div>

@@ -1,4 +1,5 @@
-import React from 'react';
+import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
 import questionsList from './questionsList.js';
 import Step1 from './steps/step1.jsx';
 import Step2 from './steps/step2.jsx';
@@ -14,11 +15,17 @@ import Step11 from './steps/step11.jsx';
 import { Container } from '@material-ui/core';
 
 const MasterForm = ({form, setForm, showResults}) => {
+  const [shown, setShown] = useState(false);
 
   const handleButtonClick = (value, step) => {
     let newObj = {...form};
     newObj[step] = value;
     setForm(newObj);
+  };
+
+  const handleFormSubmit = () => {
+    console.log("form: ", form);
+    setShown(true);
   };
 
   return (
@@ -61,6 +68,9 @@ const MasterForm = ({form, setForm, showResults}) => {
               <div className="question">
                 <Step11 questions={questionsList} clickHandler={handleButtonClick}/>
               </div>
+              <Link>
+                <button id="button-submit" type="submit" onClick={handleFormSubmit}>View Your Results!</button>
+              </Link>
               </Container>
           </div>
         </div>
